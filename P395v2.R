@@ -109,3 +109,7 @@ missing_percent_dollar_amount <- sum(is.na(data$dollar_amount)) / length(data$do
 missing_percent_status <- sum(is.na(data$status)) / length(data$status) * 100
 cat("Percentage of missing values in 'dollar_amount':", missing_percent_dollar_amount, "%\n")
 cat("Percentage of missing values in 'status':", missing_percent_status, "%\n")
+
+#merge bills and blog on bill_name
+bills_blog <- full_join(bills, blog, by = ("bill_name"))
+
