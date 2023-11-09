@@ -77,3 +77,7 @@ bills_blog <- full_join(bills, blog, by = ("bill_name"))
 
 #multiple linear regression model
 lm(status ~ dollar_amount, data=data)
+
+#create scatterplot
+plot(data$dollar_amount, data$status, main = "Bills Scatterplot with Regression Line",
+     xlab = "Dollar Amount", ylab = "Status")
