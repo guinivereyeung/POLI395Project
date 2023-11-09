@@ -79,5 +79,5 @@ bills_blog <- full_join(bills, blog, by = ("bill_name"))
 lm(status ~ dollar_amount, data=data)
 
 #create a box and whisker plot
-boxplot(dollar_amount ~ status, data = data, main = "Box-and-Whisker Plot",
+boxplot(log(dollar_amount ) ~ status, data = data, main = "Box-and-Whisker Plot",
         xlab = "Group", ylab = "Values", col = "lightblue", border = "black")
