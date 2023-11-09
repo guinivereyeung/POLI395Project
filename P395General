@@ -76,7 +76,7 @@ cat("Percentage of missing values in 'status':", missing_percent_status, "%\n")
 bills_blog <- full_join(bills, blog, by = ("bill_name"))
 
 #multiple linear regression model
-regression <- lm(status ~ dollar_amount + sponsor + state + current_party + client_name, data=data)
+regression <- lm(status ~ dollar_amount + sponsor + state + current_party + client_name + registrant_name, data=data)
 
 #create a box and whisker plot
 boxplot(log(dollar_amount ) ~ status, data = data, main = "Box-and-Whisker Plot",
