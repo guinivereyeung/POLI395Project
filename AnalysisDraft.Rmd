@@ -219,4 +219,10 @@ ggplot(dataviz, aes(log(totalspent), fill = factor(status))) +
     fill = "Bill End Status") +
   scale_fill_discrete(labels = c("In Committee", "Out Committee", "Passed"))
 ```
+Number of Unique Items in General Issue Codes
+```{r}
+unique_items <- unique(unlist(strsplit(as.character(data$general_issue_codes), ",")))
+number_of_unique_items <- length(unique_items)
+print(number_of_unique_items)
+```
 
